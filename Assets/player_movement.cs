@@ -36,24 +36,28 @@ public class player_movement : MonoBehaviour
     private void updateAnimationState(){
         if (anim.GetBool("damage"))
         {
-            TakeDamage();
-            return;
+            // recieving
+            anim.SetInteger("state",5);
         } else if (Input.GetKeyDown(KeyCode.A)){
             anim.SetInteger("state",4);
         } else if (Input.GetKeyDown(KeyCode.Space) && anim.GetInteger("state") <= 1 )
         {
+            // jumping
+            Debug.Log("jumping");
             rb.velocity = new Vector2(rb.velocity.x*2,v0y);
             anim.SetInteger("state",2);
         }
-        else if (rb.velocity.y < -0.001f)   
+        else if (rb.velocity.y < -0.1f)   
         {
-            // STATE 3 => FALLING
-            anim.SetInteger("state",3);
-            // 
+            // falling
+            Debug.Log("FALLING");
+            anim.SetInteger("state",3); 
         }else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))){
-            // Walk();
+            // walking
+            Debug.Log("moving");
             anim.SetInteger("state",1);
         } else {
+            Debug.Log("resting");
             anim.SetInteger("state",0);
         }
         
@@ -96,7 +100,7 @@ public class player_movement : MonoBehaviour
     }
     
     
-    private int damageDuration = 300;
+    private int damageDuration = 100;
     private int damageTimer = 0; 
     
     public void TakeDamage(){
@@ -104,7 +108,7 @@ public class player_movement : MonoBehaviour
         if (damageTimer == 0)
         {
            anim.Play("protagonist_damage");
-           rb.velocity = new Vector2(-10f,10f);
+           rb.velocity = new Vector2(-5f,5f);
         }
         damageTimer++; 
         if(damageTimer > damageDuration)
@@ -113,7 +117,6 @@ public class player_movement : MonoBehaviour
             rb.velocity = new Vector2(0,0);
             damageTimer = 0;
         } else { 
-            Debug.Log("PLAYING TAKE DAMAGE ANIMATION");
             anim.Play("protagonist_damage");
         }
       
