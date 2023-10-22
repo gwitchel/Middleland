@@ -43,21 +43,17 @@ public class player_movement : MonoBehaviour
         } else if (Input.GetKeyDown(KeyCode.Space) && anim.GetInteger("state") <= 1 )
         {
             // jumping
-            Debug.Log("jumping");
             rb.velocity = new Vector2(rb.velocity.x*2,v0y);
             anim.SetInteger("state",2);
         }
         else if (rb.velocity.y < -0.1f)   
         {
             // falling
-            Debug.Log("FALLING");
             anim.SetInteger("state",3); 
         }else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))){
             // walking
-            Debug.Log("moving");
             anim.SetInteger("state",1);
         } else {
-            Debug.Log("resting");
             anim.SetInteger("state",0);
         }
         

@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Dialogue : MonoBehaviour
 {
+    // Protagonist 
+    public Animator playerAnim; 
     //Fields
     //Window
     public GameObject window;
     //Indicator
     public GameObject indicator;
+    // complete 
+    public GameObject complete; 
     //Text component
     public TMP_Text dialogueText;
     //Dialogues list
@@ -27,9 +31,9 @@ public class Dialogue : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("WAKING UP DIALOGUE SYSTEM");
         ToggleIndicator(false);
         ToggleWindow(false);
+        ToggleReceiveGift(false);
     }
 
     private void ToggleWindow(bool show)
@@ -39,6 +43,11 @@ public class Dialogue : MonoBehaviour
     public void ToggleIndicator(bool show)
     {
         indicator.SetActive(show);
+    }
+
+    public void ToggleReceiveGift(bool show)
+    {
+        complete.SetActive(show); 
     }
 
     //Start Dialogue
@@ -108,7 +117,15 @@ public class Dialogue : MonoBehaviour
 
     private void Update()
     {
-        if (!started)
+        // TODO: in the future this will need to be changed to be more dynamic, but for now the character will die and the scene will advance
+        if (!started && Input.GetKeyDown(KeyCode.G))
+        {
+            Debug.Log("Pressed G");
+            playerAnim.SetInteger("state",6);
+            SceneManager.LoadScene("SampleScene");
+            
+        }
+        else if (!started)
             return;
 
         if(waitForNext && Input.GetKeyDown(KeyCode.E))
@@ -125,10 +142,12 @@ public class Dialogue : MonoBehaviour
             else
             {
                 //If not end the dialogue process
-                ToggleIndicator(true);
+                // ToggleIndicator(true);
+                ToggleReceiveGift(true);
                 EndDialogue();
             }            
-        }
-    }
+        } 
+               
 
+    }
 }

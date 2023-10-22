@@ -31,9 +31,8 @@ public class DialogueTrigger : MonoBehaviour
     //While detected if we interact start the dialogue
     private void Update()
     {
-        if(playerDetected)
+        if(playerDetected && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("STARTING DIALOGUE");
             dialogueScript.StartDialogue();
         }
     }
