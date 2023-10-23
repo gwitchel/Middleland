@@ -11,6 +11,9 @@ public class player_movement : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +22,6 @@ public class player_movement : MonoBehaviour
        anim = GetComponent<Animator>();
        spriteRenderer = GetComponent<SpriteRenderer>();
        rb.freezeRotation = true;
-
     }
 
     // Update is called once per frame
@@ -32,18 +34,32 @@ public class player_movement : MonoBehaviour
     public int speedCounter = 0;
     
 
-    
+    private int attackTime = 50; 
+    private int attackCounter = 0; 
     private void updateAnimationState(){
         if (anim.GetBool("damage"))
         {
-            // recieving
             anim.SetInteger("state",5);
-        } else if (Input.GetKeyDown(KeyCode.A)){
+        } else if (Input.GetKeyDown(KeyCode.A) || (anim.GetInteger("state") == 4 && attackCounter < attackTime )){
+           
+            attackCounter ++;
+            Debug.Log(attackTime);
+            
+            // Debug.Log(attackCounter);
             anim.SetInteger("state",4);
-        } else if (Input.GetKeyDown(KeyCode.Space) && anim.GetInteger("state") <= 1 )
+        } else if (attackCounter == attackTime){
+            Debug.Log("ChangeingSTate");
+            attackCounter=0;
+            anim.SetInteger("state",0);
+            anim.Play("protagonist_idle");
+        }
+         else if (Input.GetKeyDown(KeyCode.Space) && anim.GetInteger("state") <= 1 )
         {
-            // jumping
+            // taking off
             rb.velocity = new Vector2(rb.velocity.x*2,v0y);
+            anim.SetInteger("state",2);
+        } else if (rb.velocity.y > 0.1f){
+            // jumping 
             anim.SetInteger("state",2);
         }
         else if (rb.velocity.y < -0.1f)   
@@ -70,11 +86,14 @@ public class player_movement : MonoBehaviour
         }
         else if (state == 4)
         {
-            // AttackObject()
+            if(Mathf.Abs(rb.velocity.y)<0.1f)
+            {
+                rb.velocity =  new Vector2(0, rb.velocity.y);
+            }
+        
         }
         else if (state == 2 || state == 3){
-            // jumping or falling 
-            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y + rb.velocity.y * Physics2D.gravity.y * Time.deltaTime);
+            // jumping or falling: Gravity handels this one
         }
         else if (state == 1){
             //walking 
@@ -139,5 +158,6 @@ public class player_movement : MonoBehaviour
             anim.SetInteger("state",0);
         }
     }
+
 }
 
