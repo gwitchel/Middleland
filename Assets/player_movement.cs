@@ -97,17 +97,17 @@ public class player_movement : MonoBehaviour
         }
         else if (state == 1){
             //walking 
-            if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow) )
-            {
-                rb.velocity = new Vector2(v0x, rb.velocity.y);
-                spriteRenderer.flipX = false;
-            } 
-            else if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
-            {
-                rb.velocity = new Vector2(-1*v0x, rb.velocity.y);
-                spriteRenderer.flipX = true; 
-            }
         } 
+        if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow) )
+        {
+            rb.velocity = new Vector2(v0x, rb.velocity.y);
+            spriteRenderer.flipX = false;
+        } 
+        else if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
+        {
+            rb.velocity = new Vector2(-1*v0x, rb.velocity.y);
+            spriteRenderer.flipX = true; 
+        }
     }
 
     public void AttackObject(){

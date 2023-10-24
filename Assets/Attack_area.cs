@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attack_area : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int damage = 3; 
+    private int damage = 1; 
 
     public Rigidbody2D rb; 
 

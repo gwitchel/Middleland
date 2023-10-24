@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int health = 5; 
+    [SerializeField] public int health = 6; 
 
-    private int MAX_HEALTH = 100; 
+    private int MAX_HEALTH = 6; 
 
     private Animator anim; 
     public Rigidbody2D rb;
@@ -14,6 +14,8 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
         rb =  GetComponent<Rigidbody2D>();
     }
+
+    public HealthDisplay healthDisplay; 
     public void Damage(int amount){
         if(amount > 0)
         {
@@ -24,9 +26,9 @@ public class Health : MonoBehaviour
         }
         if (health <= 0)
         {
-            // anim.SetTrigger("damage");
             Die();
         }
+        healthDisplay.updateHealthDisplay();
         
     }
 

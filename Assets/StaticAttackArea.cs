@@ -11,6 +11,8 @@ public class StaticAttackArea : MonoBehaviour
     public Animator protagonistAnimator; 
     public Health protagonistHealth; 
 
+    public int damageAmount = 1;
+
     void Start()
     {
         protagonist =  GameObject.Find("Protagonist");
@@ -29,7 +31,7 @@ public class StaticAttackArea : MonoBehaviour
     {
         Debug.Log("COLLIDING WITH PROTAGONIST");
         if(collider.name=="Protagonist"){
-            protagonistHealth.Damage(30);
+            protagonistHealth.Damage(damageAmount);
             protagonistAnimator.SetBool("damage",true);
         }
     }
