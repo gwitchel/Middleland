@@ -21,12 +21,13 @@ public class Attack_area : MonoBehaviour
         protagonist_movement = this.transform.parent.GetComponent<player_movement>();
     }
 
+    
     private void OnTriggerEnter2D(Collider2D collider){
         if(collider.GetComponent<Health>() != null )
         {
-            protagonist_movement.AttackObject();
-            Health health = collider.GetComponent<Health>();
-            health.Damage(damage);
+            protagonist_movement.AttackObject(collider);
+            Health componentHealth = collider.GetComponent<Health>();
+            componentHealth.Damage(damage);
         }
     }
 }

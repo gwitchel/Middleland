@@ -15,7 +15,6 @@ public class HealthDisplay : MonoBehaviour
     {
         protagonist =  GameObject.Find("Protagonist");
         protagonistHealth = protagonist.GetComponent<Health>(); 
-        Debug.Log(protagonistHealth.health);
         protagonistRB = protagonist.GetComponent<Rigidbody2D>();
         updateHealthDisplay();
     }
@@ -32,7 +31,6 @@ public class HealthDisplay : MonoBehaviour
         // repropogate hearts 
         for(float i = 0f; i < protagonistHealth.health; i++)
         {
-            Debug.Log(i);
             GameObject newHeart = Instantiate(Heart, this.transform);
             newHeart.transform.position = leftCorner + new Vector2(i/3,0);
         }

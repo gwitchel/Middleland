@@ -8,20 +8,17 @@ public class player_movement : MonoBehaviour
     private float v0x = 4f;
     public Rigidbody2D rb;
     private Animator anim; 
-
+    private GameObject attackArea;
     private SpriteRenderer spriteRenderer;
-
-    
-
-
 
     // Start is called before the first frame update
     void Start()
     {
-       rb =  GetComponent<Rigidbody2D>();
-       anim = GetComponent<Animator>();
-       spriteRenderer = GetComponent<SpriteRenderer>();
-       rb.freezeRotation = true;
+        rb =  GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        attackArea =  GameObject.Find("Protagonist/AttackArea");
+        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -43,9 +40,7 @@ public class player_movement : MonoBehaviour
         } else if (Input.GetKeyDown(KeyCode.A) || (anim.GetInteger("state") == 4 && attackCounter < attackTime )){
            
             attackCounter ++;
-            Debug.Log(attackTime);
             
-            // Debug.Log(attackCounter);
             anim.SetInteger("state",4);
         } else if (attackCounter == attackTime){
             Debug.Log("ChangeingSTate");
@@ -77,6 +72,7 @@ public class player_movement : MonoBehaviour
     }
 
     private int state; 
+
     private void executeAnimationState(){
         state = anim.GetInteger("state");
 
@@ -110,8 +106,12 @@ public class player_movement : MonoBehaviour
         }
     }
 
-    public void AttackObject(){
-        rb.velocity = new Vector2(rb.velocity.x-3,rb.velocity.y+10);
+    public void AttackObject(Collider2D obj)
+    {
+        // positive: attacker is to right (bounce left )
+        if((obj.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(rb.velocity.x-3,rb.velocity.y+10);
+        // negative attack is to left (bounce right )
+        else rb.velocity = new Vector2(rb.velocity.x+3,rb.velocity.y+10);
     }
     
     

@@ -14,12 +14,15 @@ public class enemy_01_movement : MonoBehaviour
     private Animator anim; 
     private SpriteRenderer spriteRenderer;
 
+    private GameObject protagonist; 
+
     void Start()
     {
         rb =  GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb.freezeRotation = true;
+        protagonist =  GameObject.Find("/Protagonist");
     }
 
     // Update is called once per frame
@@ -30,8 +33,9 @@ public class enemy_01_movement : MonoBehaviour
 
     public void updateAnimationState(){
         timer ++;
-        if (anim.GetBool("damage")){
+        if (anim.GetInteger("state")== 5){
             TakeDamage();
+            
         }
         else if (timer > movementDuration)
         {
@@ -61,14 +65,18 @@ public class enemy_01_movement : MonoBehaviour
 
     public void TakeDamage(){
         if (damageTimer == 0)
-        {
-           rb.velocity = new Vector2(2f,2f);
+        {            
+            // positive: attacker is to right (bounce left )
+            if((protagonist.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(rb.velocity.x-3,rb.velocity.y+10);
+            // negative: attacker is to left (bounce right )
+            else rb.velocity = new Vector2(rb.velocity.x+3,rb.velocity.y+10);
         }
         else if(damageTimer > damageDuration)
         {
-            anim.SetBool("damage",false);
+            // might need to be changed with advanced character movement
+            anim.SetInteger("state",0);
             rb.velocity = new Vector2(0,0);
-            damageTimer = 0;
+            damageTimer = -1;
         } else { 
             anim.Play("enemy_01_damage");
         }

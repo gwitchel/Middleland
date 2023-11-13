@@ -27,10 +27,8 @@ public class enemy_01_animations : MonoBehaviour
 
     public void updateAnimationState(){
         timer ++ ;
-        Debug.Log(timer);
         if (timer > movementDuration)
         {
-            Debug.Log("Hit timer limit!");
             anim.SetBool("walking",!anim.GetBool("walking"));
             timer = 0;
         }

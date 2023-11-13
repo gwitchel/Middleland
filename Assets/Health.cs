@@ -28,7 +28,12 @@ public class Health : MonoBehaviour
         {
             Die();
         }
-        healthDisplay.updateHealthDisplay();
+
+        if(healthDisplay != null)
+        {
+            healthDisplay.updateHealthDisplay();
+        }
+        
         
     }
 

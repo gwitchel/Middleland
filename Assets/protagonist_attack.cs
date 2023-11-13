@@ -13,9 +13,7 @@ public class protagonist_attack : MonoBehaviour
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
-        Debug.Log(attackArea.activeSelf);
         attackArea.SetActive(false);
-        Debug.Log(attackArea.activeSelf);
     }
 
     // Update is called once per frame
@@ -41,6 +39,5 @@ public class protagonist_attack : MonoBehaviour
     private void Attack(){
         attacking = true; 
         attackArea.SetActive(true);
-        Debug.Log(attackArea.activeSelf);
     }
 }
