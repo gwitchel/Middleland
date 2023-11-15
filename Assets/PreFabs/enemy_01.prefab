@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  rb: {fileID: 0}
+  rb: {fileID: 7484809493776291764}
   healthDisplay: {fileID: 0}
 --- !u!1 &7484809493938723265
 GameObject:
@@ -278,3 +278,4 @@ MonoBehaviour:
   protagonistRB: {fileID: 0}
   protagonistAnimator: {fileID: 0}
   protagonistHealth: {fileID: 0}
+  damageAmount: 1

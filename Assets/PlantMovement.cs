@@ -10,10 +10,13 @@ public class PlantMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     // the amount of time is takes for the plant to spawn a new enemy 
     public int primaryAnimationFrames;
+
+    public EnemySpawner enemySpawner; 
     void Start()
     {
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        enemySpawner = GetComponent<EnemySpawner>();
     }
 
     // Update is called once per frame
@@ -27,11 +30,10 @@ public class PlantMovement : MonoBehaviour
         // Increment the frame counter
         timer++;
 
-        Debug.Log(timer);
-        Debug.Log(primaryAnimationFrames);
         // Check if it's time to play the secondary animation
         if (timer >= primaryAnimationFrames)
         {
+            enemySpawner.SpawnEnemyNearby();
             // Play the secondary animation
             anim.Play("PlantSpawn");
 

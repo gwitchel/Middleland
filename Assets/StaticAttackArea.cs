@@ -29,7 +29,6 @@ public class StaticAttackArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("COLLIDING WITH PROTAGONIST");
         if(collider.name=="Protagonist"){
             protagonistHealth.Damage(damageAmount);
             protagonistAnimator.SetBool("damage",true);

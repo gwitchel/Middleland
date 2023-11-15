@@ -29,31 +29,34 @@ public class player_movement : MonoBehaviour
     }
 
     public int speedCounter = 0;
-    
-
     private int attackTime = 50; 
     private int attackCounter = 0; 
     private void updateAnimationState(){
         if (anim.GetBool("damage"))
         {
             anim.SetInteger("state",5);
-        } else if (Input.GetKeyDown(KeyCode.A) || (anim.GetInteger("state") == 4 && attackCounter < attackTime )){
+        } 
+        else if (Input.GetKeyDown(KeyCode.A) || (anim.GetInteger("state") == 4 && attackCounter < attackTime ))
+        {
            
             attackCounter ++;
             
             anim.SetInteger("state",4);
-        } else if (attackCounter == attackTime){
-            Debug.Log("ChangeingSTate");
+        } 
+        else if (attackCounter == attackTime)
+        {
             attackCounter=0;
             anim.SetInteger("state",0);
             anim.Play("protagonist_idle");
         }
-         else if (Input.GetKeyDown(KeyCode.Space) && anim.GetInteger("state") <= 1 )
+        else if (Input.GetKeyDown(KeyCode.Space) && anim.GetInteger("state") <= 1 )
         {
             // taking off
             rb.velocity = new Vector2(rb.velocity.x*2,v0y);
             anim.SetInteger("state",2);
-        } else if (rb.velocity.y > 0.1f){
+        } 
+        else if (rb.velocity.y > 0.1f)
+        {
             // jumping 
             anim.SetInteger("state",2);
         }
@@ -61,14 +64,16 @@ public class player_movement : MonoBehaviour
         {
             // falling
             anim.SetInteger("state",3); 
-        }else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))){
+        }
+        else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)))
+        {
             // walking
             anim.SetInteger("state",1);
-        } else {
+        }
+        else
+        {
             anim.SetInteger("state",0);
         }
-        
-      
     }
 
     private int state; 
@@ -114,7 +119,6 @@ public class player_movement : MonoBehaviour
         else rb.velocity = new Vector2(rb.velocity.x+3,rb.velocity.y+10);
     }
     
-    
     private int damageDuration = 100;
     private int damageTimer = 0; 
     
@@ -159,5 +163,8 @@ public class player_movement : MonoBehaviour
         }
     }
 
+    private void Look(){
+        
+    }
 }
 
