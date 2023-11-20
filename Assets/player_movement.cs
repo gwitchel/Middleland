@@ -113,8 +113,10 @@ public class player_movement : MonoBehaviour
 
     public void AttackObject(Collider2D obj)
     {
+        // attacking down, bounce straight up
+        if (Input.GetKey(KeyCode.DownArrow)) rb.velocity = new Vector2(rb.velocity.x,30);
         // positive: attacker is to right (bounce left )
-        if((obj.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(rb.velocity.x-3,rb.velocity.y+10);
+        else if((obj.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(rb.velocity.x-3,rb.velocity.y+10);
         // negative attack is to left (bounce right )
         else rb.velocity = new Vector2(rb.velocity.x+3,rb.velocity.y+10);
     }
@@ -163,8 +165,6 @@ public class player_movement : MonoBehaviour
         }
     }
 
-    private void Look(){
-        
-    }
+ 
 }
 

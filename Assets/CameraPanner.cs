@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CameraPanner : MonoBehaviour
 {
-    public float y1 = 5.0f; // Number of units to pan the camera
+    public float y1 = 8.0f; // Number of units to pan the camera
     private Vector3 originalPosition;
 
+    private bool movedDown = false; 
     void Start()
     {
         // Store the original position of the camera
@@ -16,16 +17,18 @@ public class CameraPanner : MonoBehaviour
     void Update()
     {
         // Check if the down key is being held down
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && Mathf.Abs(transform.parent.GetComponent<Rigidbody2D>().velocity.y) < 0.1f )
         {
             // Pan the camera down
+            movedDown = true; 
             PanCamera(-y1);
         }
         // Check if the down key has been released
-        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        else if (Input.GetKeyUp(KeyCode.DownArrow) && movedDown)
         {
             // Pan the camera back up to the original position
             PanCamera(y1);
+            movedDown = false; 
         }
     }
 

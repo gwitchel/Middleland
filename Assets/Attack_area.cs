@@ -9,22 +9,16 @@ public class Attack_area : MonoBehaviour
 
     public Rigidbody2D rb; 
 
-    private Animator anim; 
+    public Animator anim; 
 
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
-    private player_movement protagonist_movement; 
-    void Start(){
-        rb =  this.transform.parent.GetComponent<Rigidbody2D>();
-        anim = this.transform.parent.GetComponent<Animator>();
-        spriteRenderer = this.transform.parent.GetComponent<SpriteRenderer>();
-        protagonist_movement = this.transform.parent.GetComponent<player_movement>();
-    }
+    public player_movement protagonist_movement; 
 
-    
     private void OnTriggerEnter2D(Collider2D collider){
         if(collider.GetComponent<Health>() != null )
         {
+            //TODO: protagonist can attack multiple at once
             protagonist_movement.AttackObject(collider);
             Health componentHealth = collider.GetComponent<Health>();
             componentHealth.Damage(damage);
