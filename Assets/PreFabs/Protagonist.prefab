@@ -79,7 +79,7 @@ MonoBehaviour:
   protagonist: {fileID: 8438441905762916233}
   protagonistRB: {fileID: 8438441905762916343}
   protagonistAnimator: {fileID: 8438441905762916339}
-  protagonistHealth: {fileID: 8438441905762916338}
+  protagonistHealth: {fileID: 0}
   damageAmount: 1
 --- !u!114 &291593211
 MonoBehaviour:
@@ -96,7 +96,7 @@ MonoBehaviour:
   rb: {fileID: 8438441905762916343}
   anim: {fileID: 8438441905762916339}
   spriteRenderer: {fileID: 8438441905762916342}
-  protagonist_movement: {fileID: 8438441905762916340}
+  protagonistBaseMovement: {fileID: 0}
 --- !u!1 &964627511
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,8 +156,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.3126235, y: -0.93124974}
-      - {x: -0.3517132, y: -0.9202765}
+    - - {x: 0.5107343, y: -1.228416}
+      - {x: -0.52152276, y: -1.2457445}
       - {x: -0.48227465, y: -0.27304763}
       - {x: -0.06418924, y: 0.0069769137}
       - {x: -0.04364364, y: 0.00021234836}
@@ -179,7 +179,7 @@ MonoBehaviour:
   protagonist: {fileID: 8438441905762916233}
   protagonistRB: {fileID: 8438441905762916343}
   protagonistAnimator: {fileID: 8438441905762916339}
-  protagonistHealth: {fileID: 8438441905762916338}
+  protagonistHealth: {fileID: 0}
   damageAmount: 1
 --- !u!114 &964627513
 MonoBehaviour:
@@ -196,7 +196,7 @@ MonoBehaviour:
   rb: {fileID: 8438441905762916343}
   anim: {fileID: 8438441905762916339}
   spriteRenderer: {fileID: 8438441905762916342}
-  protagonist_movement: {fileID: 8438441905762916340}
+  protagonistBaseMovement: {fileID: 0}
 --- !u!1 &1581404384667290419
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +245,7 @@ MonoBehaviour:
   protagonistRB: {fileID: 8438441905762916343}
   Heart: {fileID: 5933552053813541254, guid: 71ca909e3d069435aa8780314c7a5e9f, type: 3}
   HalfHeart: {fileID: 3032847061873925299, guid: 2661dbf7e7fab4c8896ee5ec48192b08, type: 3}
+  Reload: {fileID: 0}
 --- !u!1 &5640034045906774180
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +325,7 @@ MonoBehaviour:
   protagonist: {fileID: 8438441905762916233}
   protagonistRB: {fileID: 8438441905762916343}
   protagonistAnimator: {fileID: 8438441905762916339}
-  protagonistHealth: {fileID: 8438441905762916338}
+  protagonistHealth: {fileID: 0}
   damageAmount: 1
 --- !u!114 &393352790
 MonoBehaviour:
@@ -341,7 +342,7 @@ MonoBehaviour:
   rb: {fileID: 8438441905762916343}
   anim: {fileID: 8438441905762916339}
   spriteRenderer: {fileID: 8438441905762916342}
-  protagonist_movement: {fileID: 8438441905762916340}
+  protagonistBaseMovement: {fileID: 0}
 --- !u!1 &8239347331915096787
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +458,7 @@ MonoBehaviour:
   protagonist: {fileID: 8438441905762916233}
   protagonistRB: {fileID: 8438441905762916343}
   protagonistAnimator: {fileID: 8438441905762916339}
-  protagonistHealth: {fileID: 8438441905762916338}
+  protagonistHealth: {fileID: 0}
   damageAmount: 1
 --- !u!114 &657162170
 MonoBehaviour:
@@ -474,7 +475,7 @@ MonoBehaviour:
   rb: {fileID: 8438441905762916343}
   anim: {fileID: 8438441905762916339}
   spriteRenderer: {fileID: 8438441905762916342}
-  protagonist_movement: {fileID: 8438441905762916340}
+  protagonistBaseMovement: {fileID: 0}
 --- !u!1 &8438441905487673803
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,12 +569,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8438441905487673803}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02f342b9b45d54974905ca5b5830ff8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  y1: 1
+  y1: 1.5
 --- !u!1 &8438441905762916233
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,12 +587,13 @@ GameObject:
   - component: {fileID: 8438441905762916342}
   - component: {fileID: 8438441905762916343}
   - component: {fileID: 8438441905762916232}
-  - component: {fileID: 8438441905762916340}
   - component: {fileID: 8438441905762916339}
   - component: {fileID: 750997313578335115}
   - component: {fileID: 8438441905762916338}
   - component: {fileID: 8438441905762916337}
   - component: {fileID: 4974495987480792841}
+  - component: {fileID: 2059754612}
+  - component: {fileID: 4487835851903705140}
   m_Layer: 0
   m_Name: Protagonist
   m_TagString: Player
@@ -608,7 +610,7 @@ Transform:
   m_GameObject: {fileID: 8438441905762916233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.76, y: -4, z: 0}
-  m_LocalScale: {x: 1.1935055, y: 1.1935055, z: 1.1935055}
+  m_LocalScale: {x: 1.3064717, y: 1.3064717, z: 1.3064717}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8438441905487673655}
@@ -683,7 +685,7 @@ Rigidbody2D:
   m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 10
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -702,7 +704,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013187796, y: -0.03776376}
+  m_Offset: {x: -0.006759241, y: -0.03776376}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -713,22 +715,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4467882, y: 0.46844712}
+  m_Size: {x: 0.17677814, y: 0.46844712}
   m_EdgeRadius: 0
---- !u!114 &8438441905762916340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8438441905762916233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 527653f40fa2d40918c925cef9deb0e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  speedCounter: 0
 --- !u!95 &8438441905762916339
 Animator:
   serializedVersion: 5
@@ -762,6 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17356df8258d14e9590d61c03deb77df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 8438441905762916343}
 --- !u!114 &8438441905762916338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,12 +758,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8438441905762916233}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88ed882f9ce584f45ab966dcc296cb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
   rb: {fileID: 8438441905762916343}
   healthDisplay: {fileID: 146149001811257728}
 --- !u!114 &8438441905762916337
@@ -802,4 +791,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58d1912920a347d4a883793d39d32c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0}
+--- !u!114 &2059754612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438441905762916233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a22d1bc1061541f89627a517cde1c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 6
+  MAX_HEALTH: 6
+  anim: {fileID: 8438441905762916339}
+  rb: {fileID: 8438441905762916343}
+  healthDisplay: {fileID: 146149001811257728}
+--- !u!114 &4487835851903705140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438441905762916233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 900be5bac69db4384829e64070cd6c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  speedCounter: 0

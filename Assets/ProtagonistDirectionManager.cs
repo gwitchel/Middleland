@@ -16,13 +16,13 @@ public class DirectionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.DownArrow)){
-            Debug.Log("Down key down");
+        if(Input.GetKey(KeyCode.DownArrow))
+        {
             anim.SetLayerWeight(anim.GetLayerIndex("down"), 1f);
-        } else {
-            Debug.Log("Down key UP");
+        }
+        else 
+        {
             anim.SetLayerWeight(anim.GetLayerIndex("down"), 0f);
-
         }
     }
 

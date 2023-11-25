@@ -45,8 +45,6 @@ public class EnemySpawner : MonoBehaviour
             // Check if the position is valid (not overlapping and on the same surface)
             if(IsValidSpawnPosition(potentialSpawnPosition))
             {
-                Debug.Log(transform.position);
-                Debug.Log(potentialSpawnPosition);
                 return potentialSpawnPosition;
             }
         }

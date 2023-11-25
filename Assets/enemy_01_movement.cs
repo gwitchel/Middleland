@@ -67,9 +67,9 @@ public class enemy_01_movement : MonoBehaviour
         if (damageTimer == 0)
         {            
             // positive: attacker is to right (bounce left )
-            if((protagonist.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(rb.velocity.x-3,rb.velocity.y+10);
+            if((protagonist.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(rb.velocity.x-5,rb.velocity.y+10);
             // negative: attacker is to left (bounce right )
-            else rb.velocity = new Vector2(rb.velocity.x+3,rb.velocity.y+10);
+            else rb.velocity = new Vector2(rb.velocity.x+5,rb.velocity.y+10);
         }
         else if(damageTimer > damageDuration)
         {

@@ -13,15 +13,16 @@ public class Attack_area : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-    public player_movement protagonist_movement; 
+    public ProtagonistBaseMovements protagonistBaseMovement; 
 
     private void OnTriggerEnter2D(Collider2D collider){
         if(collider.GetComponent<Health>() != null )
         {
             //TODO: protagonist can attack multiple at once
-            protagonist_movement.AttackObject(collider);
+            protagonistBaseMovement.AttackObject(collider);
             Health componentHealth = collider.GetComponent<Health>();
             componentHealth.Damage(damage);
+            
         }
     }
 }

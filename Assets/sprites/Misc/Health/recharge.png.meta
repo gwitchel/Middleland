@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 969b5b74c4a6a4d0397b6ac36c29cc76
+guid: 7d4d99b8a98664152a72977cc1febec7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,106 +117,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: move 32x32_0
+      name: recharge_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 128
-        width: 11
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 165f8c04b130b41539583b9aefad5b27
-      internalID: 628070135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move 32x32_1
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 96
-        width: 12
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c69a4b54d781c4eb7892b8c5701774b2
-      internalID: 989604485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move 32x32_2
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 64
-        width: 14
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0da87ea1d425d43139dd9c54c51d9285
-      internalID: -2129623170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: move 32x32_3
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 32
+        x: 0
+        y: 11
         width: 12
         height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f65f54c3ddd64422a829f46e0f76841
-      internalID: 255588743
+      spriteID: aaa9e9bed32f845d4afba7c3331a0fad
+      internalID: -1679423880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: move 32x32_4
+      name: recharge_1
       rect:
         serializedVersion: 2
-        x: 10
+        x: 12
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecccd65d29464c20b22481777424204
+      internalID: -426138520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387840b1163764b9a98ebba081251735
+      internalID: -682876388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847c527091f8f42828c26cd9ec862b30
+      internalID: -746449219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7609948b6dc46b38ea25f660bc97df
+      internalID: 966777488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325d33ce6961e426ea69dde7063a420c
+      internalID: -747617289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e47c7dd4b214a98b936aeea2797767
+      internalID: 638955035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5949caedcde4e6781f6649d3b41740
+      internalID: -147570478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cc13d82c7ba4f5fa8c62b4f6814284
+      internalID: -976138661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 11
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b326717eb47fc4865910e8714994b0c4
+      internalID: -1177775255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recharge_10
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 11
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2ea65f552fe4478ab42ce0862307beb
-      internalID: 1649633099
+      spriteID: 2935523a7fcb444c5be0c177794f350a
+      internalID: 300104395
       vertices: []
       indices: 
       edges: []
@@ -232,11 +358,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      move 32x32_0: 628070135
-      move 32x32_1: 989604485
-      move 32x32_2: -2129623170
-      move 32x32_3: 255588743
-      move 32x32_4: 1649633099
+      recharge_0: -1679423880
+      recharge_1: -426138520
+      recharge_10: 300104395
+      recharge_2: -682876388
+      recharge_3: -746449219
+      recharge_4: 966777488
+      recharge_5: -747617289
+      recharge_6: 638955035
+      recharge_7: -147570478
+      recharge_8: -976138661
+      recharge_9: -1177775255
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

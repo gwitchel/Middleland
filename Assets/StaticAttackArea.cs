@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class StaticAttackArea : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // a static attack area for enemies to attack the protagonist
     public GameObject protagonist;
     public Rigidbody2D protagonistRB; 
 
     public Animator protagonistAnimator; 
-    public Health protagonistHealth; 
+    public ProtagonistHealth protagonistHealth; 
 
     public int damageAmount = 1;
 
@@ -17,7 +17,7 @@ public class StaticAttackArea : MonoBehaviour
     {
         protagonist =  GameObject.Find("Protagonist");
         protagonistRB = protagonist.GetComponent<Rigidbody2D>();
-        protagonistHealth = protagonist.GetComponent<Health>(); 
+        protagonistHealth = protagonist.GetComponent<ProtagonistHealth>(); 
         protagonistAnimator = protagonist.GetComponent<Animator>();
     }
 
@@ -30,7 +30,7 @@ public class StaticAttackArea : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.name=="Protagonist"){
-            protagonistHealth.Damage(damageAmount);
+            protagonistHealth.Damage(damageAmount,this.transform.parent.gameObject);
             protagonistAnimator.SetBool("damage",true);
         }
     }

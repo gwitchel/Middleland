@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-public class player_movement : MonoBehaviour
+
+public class ProtagonistBaseMovements : MonoBehaviour
 {
     private float v0y = 24f; 
     private float v0x = 4f;
@@ -23,20 +23,18 @@ public class player_movement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        updateAnimationState();
-        executeAnimationState();
+    {        
+        if(anim.GetLayerWeight(anim.GetLayerIndex("damage")) < 1f){
+            executeAnimationState();
+            updateAnimationState();
+        }
     }
 
     public int speedCounter = 0;
     private int attackTime = 50; 
     private int attackCounter = 0; 
     private void updateAnimationState(){
-        if (anim.GetBool("damage"))
-        {
-            anim.SetInteger("state",5);
-        } 
-        else if (Input.GetKeyDown(KeyCode.A) || (anim.GetInteger("state") == 4 && attackCounter < attackTime ))
+        if (Input.GetKeyDown(KeyCode.A) || (anim.GetInteger("state") == 4 && attackCounter < attackTime ))
         {
            
             attackCounter ++;
@@ -83,7 +81,7 @@ public class player_movement : MonoBehaviour
 
         if(state == 5)
         {
-            TakeDamage();
+            // TakeDamage();
         }
         else if (state == 4)
         {
@@ -114,34 +112,15 @@ public class player_movement : MonoBehaviour
     public void AttackObject(Collider2D obj)
     {
         // attacking down, bounce straight up
-        if (Input.GetKey(KeyCode.DownArrow)) rb.velocity = new Vector2(rb.velocity.x,30);
+        if (Input.GetKey(KeyCode.UpArrow)) rb.velocity = new Vector2(Mathf.Min(0,rb.velocity.x),rb.velocity.y);
+        else if (Input.GetKey(KeyCode.DownArrow) && Mathf.Abs(rb.velocity.y)>0.1f) rb.velocity = new Vector2(rb.velocity.x,20);
         // positive: attacker is to right (bounce left )
         else if((obj.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(rb.velocity.x-3,rb.velocity.y+10);
         // negative attack is to left (bounce right )
         else rb.velocity = new Vector2(rb.velocity.x+3,rb.velocity.y+10);
     }
     
-    private int damageDuration = 100;
-    private int damageTimer = 0; 
-    
-    public void TakeDamage(){
-        anim.SetInteger("state",0);
-        if (damageTimer == 0)
-        {
-           anim.Play("protagonist_damage");
-           rb.velocity = new Vector2(-5f,5f);
-        }
-        damageTimer++; 
-        if(damageTimer > damageDuration)
-        {
-            anim.SetBool("damage",false);
-            rb.velocity = new Vector2(0,0);
-            damageTimer = 0;
-        } else { 
-            anim.Play("protagonist_damage");
-        }
-      
-    }
+
 
     private void Walk(){
         if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)) && anim.GetInteger("state")<3 && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.A) ))
@@ -167,4 +146,3 @@ public class player_movement : MonoBehaviour
 
  
 }
-
