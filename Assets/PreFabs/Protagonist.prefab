@@ -750,7 +750,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17356df8258d14e9590d61c03deb77df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 8438441905762916343}
+  tilemap: {fileID: 0}
+  BasicPlant: {fileID: 6627470908572169306, guid: f5b4ab5248f8a4bacb34024472d88b62, type: 3}
+  GhostPlant: {fileID: 6627470908572169306, guid: bd576ccfef11041129da5842695076d3, type: 3}
+  anim: {fileID: 8438441905762916339}
 --- !u!114 &8438441905762916338
 MonoBehaviour:
   m_ObjectHideFlags: 0

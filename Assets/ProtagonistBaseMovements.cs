@@ -24,7 +24,7 @@ public class ProtagonistBaseMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        if(anim.GetLayerWeight(anim.GetLayerIndex("damage")) < 1f){
+        if(anim.GetLayerWeight(anim.GetLayerIndex("damage")) < 1f && anim.GetLayerWeight(anim.GetLayerIndex("Driven Events")) < 1f){
             executeAnimationState();
             updateAnimationState();
         }
@@ -36,17 +36,9 @@ public class ProtagonistBaseMovements : MonoBehaviour
     private void updateAnimationState(){
         if (Input.GetKeyDown(KeyCode.A) || (anim.GetInteger("state") == 4 && attackCounter < attackTime ))
         {
-           
-            attackCounter ++;
-            
-            anim.SetInteger("state",4);
+           StartCoroutine(PlayAttackingAnimation());
+
         } 
-        else if (attackCounter == attackTime)
-        {
-            attackCounter=0;
-            anim.SetInteger("state",0);
-            anim.Play("protagonist_idle");
-        }
         else if (Input.GetKeyDown(KeyCode.Space) && anim.GetInteger("state") <= 1 )
         {
             // taking off
@@ -79,11 +71,7 @@ public class ProtagonistBaseMovements : MonoBehaviour
     private void executeAnimationState(){
         state = anim.GetInteger("state");
 
-        if(state == 5)
-        {
-            // TakeDamage();
-        }
-        else if (state == 4)
+        if (state == 4)
         {
             if(Mathf.Abs(rb.velocity.y)<0.1f)
             {
@@ -111,13 +99,19 @@ public class ProtagonistBaseMovements : MonoBehaviour
 
     public void AttackObject(Collider2D obj)
     {
-        // attacking down, bounce straight up
+        // attacking up, stop rise 
         if (Input.GetKey(KeyCode.UpArrow)) rb.velocity = new Vector2(Mathf.Min(0,rb.velocity.x),rb.velocity.y);
+        
+        // attacking down, bounce up 
         else if (Input.GetKey(KeyCode.DownArrow) && Mathf.Abs(rb.velocity.y)>0.1f) rb.velocity = new Vector2(rb.velocity.x,20);
+        
         // positive: attacker is to right (bounce left )
-        else if((obj.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(rb.velocity.x-3,rb.velocity.y+10);
+        else if((obj.transform.position-this.transform.position).x>0) rb.velocity = new Vector2(-3,rb.velocity.y);
         // negative attack is to left (bounce right )
-        else rb.velocity = new Vector2(rb.velocity.x+3,rb.velocity.y+10);
+        else rb.velocity = new Vector2(3,rb.velocity.y);
+
+        // if they're still bounce up
+        if(Mathf.Abs(rb.velocity.y) > 0.1f) rb.velocity = new Vector2(rb.velocity.x,10); 
     }
     
 
@@ -142,6 +136,21 @@ public class ProtagonistBaseMovements : MonoBehaviour
         {
             anim.SetInteger("state",0);
         }
+    }
+
+    private IEnumerator PlayAttackingAnimation()
+    {
+        int layerIndex = anim.GetLayerIndex("Driven Events");
+
+        anim.SetLayerWeight(layerIndex, 1f); // Activate the layer
+        anim.SetBool("strike",true);
+
+        yield return new WaitForSeconds(0.3f); // Wait for the specified duration
+        
+        anim.SetBool("strike",false);
+
+        anim.SetLayerWeight(layerIndex, 0f);; // Deactivate the layer
+
     }
 
  

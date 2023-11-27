@@ -3,7 +3,10 @@ guid: 17356df8258d14e9590d61c03deb77df
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - tilemap: {instanceID: 0}
+  - BasicPlant: {fileID: 6627470908572169306, guid: f5b4ab5248f8a4bacb34024472d88b62, type: 3}
+  - GhostPlant: {fileID: 6627470908572169306, guid: bd576ccfef11041129da5842695076d3, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
