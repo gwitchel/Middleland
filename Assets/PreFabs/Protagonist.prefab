@@ -160,6 +160,7 @@ PolygonCollider2D:
       - {x: -0.52152276, y: -1.2457445}
       - {x: -0.48227465, y: -0.27304763}
       - {x: -0.06418924, y: 0.0069769137}
+      - {x: -0.048316564, y: 0.0017508904}
       - {x: -0.04364364, y: 0.00021234836}
       - {x: 0.4374119, y: -0.15817475}
       - {x: 0.5091485, y: -0.35064727}
@@ -521,7 +522,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.20000002, g: 0.13333334, b: 0.121568635, a: 0.5176471}
+  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.5176471}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -707,8 +708,8 @@ BoxCollider2D:
   m_Offset: {x: -0.006759241, y: -0.03776376}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.4375, y: 0.65625}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.4375, y: 0.46875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

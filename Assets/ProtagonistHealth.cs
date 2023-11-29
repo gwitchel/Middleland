@@ -66,7 +66,6 @@ public class ProtagonistHealth : MonoBehaviour
         anim.SetLayerWeight(anim.GetLayerIndex("damage"), 1f); // Activate the layer
         yield return new WaitForSeconds(0.3f); // Wait for the specified duration
         anim.SetLayerWeight(anim.GetLayerIndex("damage"), 0f);; // Deactivate the layer
-        // anim.SetInteger("state",0);
     }
 
     private IEnumerator RechargeHeartsAtInterval(float interval)

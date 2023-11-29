@@ -143,12 +143,10 @@ public class ProtagonistBaseMovements : MonoBehaviour
         int layerIndex = anim.GetLayerIndex("Driven Events");
 
         anim.SetLayerWeight(layerIndex, 1f); // Activate the layer
-        anim.SetBool("strike",true);
+        anim.Play("strike");
 
         yield return new WaitForSeconds(0.3f); // Wait for the specified duration
         
-        anim.SetBool("strike",false);
-
         anim.SetLayerWeight(layerIndex, 0f);; // Deactivate the layer
 
     }

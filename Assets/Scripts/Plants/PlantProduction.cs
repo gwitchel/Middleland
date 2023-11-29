@@ -13,6 +13,9 @@ public class PlantProduction : MonoBehaviour
         StartCoroutine(StartCountdown(timerDuration));
     }
 
+    public void Harvest(){
+        
+    }
     private IEnumerator StartCountdown(float duration)
     {
         // Wait for the duration to pass
