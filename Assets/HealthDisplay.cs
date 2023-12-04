@@ -21,7 +21,8 @@ public class HealthDisplay : MonoBehaviour
     }
 
     public void updateHealthDisplay(){
-        Vector2 padding = new Vector2(0.75f,-0.5f) ;
+        // camera.ViewportToWorldPoint(new Vector3(1,1,camera.nearClipPlane);
+        Vector2 padding = new Vector2(0.5f,-0.75f) ;
         Vector2 leftCorner = Camera.main.ViewportToWorldPoint(new Vector2(0,1));
         leftCorner += padding;
         

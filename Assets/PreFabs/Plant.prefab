@@ -124,7 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryAnimationFrames: 3000
-  enemySpawner: {fileID: 0}
+  plantProduction: {fileID: 3642220408704806360}
+  enemySpawner: {fileID: 6627470908572169319}
 --- !u!114 &6627470908572169319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,3 +202,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerDuration: 60
   readyForHarvest: 0
+  score: {fileID: 0}

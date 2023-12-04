@@ -11,12 +11,14 @@ public class PlantMovement : MonoBehaviour
     // the amount of time is takes for the plant to spawn a new enemy 
     public int primaryAnimationFrames;
 
+    public PlantProduction plantProduction; 
     public EnemySpawner enemySpawner; 
     void Start()
     {
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         enemySpawner = GetComponent<EnemySpawner>();
+        plantProduction = GetComponent<PlantProduction>();
     }
 
     // Update is called once per frame
@@ -33,16 +35,17 @@ public class PlantMovement : MonoBehaviour
         // Check if it's time to play the secondary animation
         if (timer >= primaryAnimationFrames)
         {
+            Debug.Log("SPAWINGING ENEMY");
             enemySpawner.SpawnEnemyNearby();
-            // Play the secondary animation
-            anim.Play("PlantSpawn");
-
+            
             // Reset the frame counter
             timer = 0;
 
             // Wait for the secondary animation to finish before returning to the primary animation
             StartCoroutine(WaitForSpawn());
         }
+        if (plantProduction != null && plantProduction.readyForHarvest) anim.Play("PlantSpawn");
+        else anim.Play("PlantMove");
     }
 
     private IEnumerator WaitForSpawn()
@@ -52,9 +55,6 @@ public class PlantMovement : MonoBehaviour
 
         // Wait for the length of the secondary animation
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-
-        // Return to the primary animation
-        anim.Play("PlantMove");
 
         // Enable the script
         enabled = true;

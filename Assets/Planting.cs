@@ -48,7 +48,6 @@ public class Planting : MonoBehaviour
             GameObject ghostPlant = GameObject.Find("ghostPlant(Clone)");
             Destroy(ghostPlant);
         }
-       
         if(canPlant() && !GhostPlaced && Input.GetKeyDown(KeyCode.P))
         {
             DisplayGhost(); 
@@ -56,7 +55,6 @@ public class Planting : MonoBehaviour
         else if(canPlant() && GhostPlaced && Input.GetKeyDown(KeyCode.P))
         {
             ReplaceGhostPlantWithPlant();
-            
         }
         else if (Input.GetKeyDown(KeyCode.D)){
             Dig();
@@ -83,7 +81,6 @@ public class Planting : MonoBehaviour
         return false; 
 
     }
-
     public void DisplayGhost(){
         // calculate spawn position on tilemap
         Vector3Int protagonistTilePosition = tilemap.WorldToCell(protagonist.transform.position);

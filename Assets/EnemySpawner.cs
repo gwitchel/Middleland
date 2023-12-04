@@ -40,7 +40,8 @@ public class EnemySpawner : MonoBehaviour
             float randomRadius = averageRadius + Random.Range(-radiusVariance, radiusVariance) * Mathf.Pow(Random.value, 2);
 
             // Calculate the spawn position
-            Vector2 potentialSpawnPosition = new Vector2(transform.position.x,transform.position.y) + randomRadius * new Vector2(Random.value < 0.5f ? -1 : 1, 0);
+            // Vector2 potentialSpawnPosition = new Vector2(transform.position.x,transform.position.y) + randomRadius * new Vector2(Random.value < 0.5f ? -1 : 1, 0);
+            Vector2 potentialSpawnPosition = new Vector2(transform.position.x+0.75f,transform.position.y+0.75f); // + randomRadius * new Vector2(Random.value < 0.5f ? -1 : 1, 0);
 
             // Check if the position is valid (not overlapping and on the same surface)
             if(IsValidSpawnPosition(potentialSpawnPosition))

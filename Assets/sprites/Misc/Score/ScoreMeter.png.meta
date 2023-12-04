@@ -1,0 +1,1433 @@
+fileFormatVersion: 2
+guid: 9c1cb3e898ffe4a3eb586698732d3c72
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ScoreMeter_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0ef0a0983954f5481f8d708d1df4a1
+      internalID: -1528233613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 285
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4c809dcee824f09a60a1df7ed5182c
+      internalID: 306820630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab06604c451bf45e9a69e72e7c656bb5
+      internalID: -632238628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 275
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e8d9103909440c28afcba3bee99370
+      internalID: 440125558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49d7ec539d8245ffbd035057bd91864
+      internalID: -801695168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 265
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88af6cbd80c2d4583bac09ab43b33abb
+      internalID: 843835139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d80e26a8de7489d913778a9eb98e9b
+      internalID: 1849769677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7717370b9db73434b959f94cdb5102a3
+      internalID: -1817401408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8102940358b5f40d0abae365787d7965
+      internalID: 1592740194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 245
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879e2815c57bb4e6592eafaeb3a2e510
+      internalID: -745043498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b73717b8888e43a8b93d306a04d2a1a
+      internalID: 582865753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 235
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd706cfc39e648e99835fe2eadf84ad
+      internalID: -745133687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b37b27f9089d4c9693b0be8844d0085
+      internalID: -898469590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e9e01721aa84f5c9679962d8146e7d
+      internalID: 2087085587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e151845e7d614339a969b9756dd06cd
+      internalID: -1252720356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 215
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac566762a5b7243f1bcd023be8e1c4cb
+      internalID: 1099994363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e04659471504931ab54f054fd45ba5
+      internalID: -1974103077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 205
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98eebb7cae30941a5b41578eddb43790
+      internalID: -596195789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28939edc1b23449d0b400c5288778777
+      internalID: 1720231323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c229e39c4de147789287d8af82052ee
+      internalID: -2139458472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 190
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019d316eb803348a3bae1aa9f1b1b7b3
+      internalID: 1857031587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 185
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d106ff9bde0664c57864cb1e2ceaec8a
+      internalID: 1397369573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636677626985f4710a840d72e9141e9f
+      internalID: 1867502102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64bb6f08b97a46b4844c7633bfb769c
+      internalID: 408755225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933ffe6a4b82441b496d0d543ded82c1
+      internalID: -1454090330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebef23e7e7b247b6a6ec1140181778d
+      internalID: -1160755541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af398552808543499ca999e5fda8baf
+      internalID: 3238087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd768d353474410e9c52d3c23a86706
+      internalID: -659917031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c391293f67e1b490e8c9b76bc1ea90fe
+      internalID: 1820416656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698009957c79b423181d58803fcd4322
+      internalID: 1617816647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165caa0a7560e43bca2191e314d5fcd8
+      internalID: 1579202695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f5011249153402aada8ea63d58be19
+      internalID: 1081511523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefee94d4bc2e4521a1943c8e32d80b4
+      internalID: -935985075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e9760ebf2da491198db6ce34d30578
+      internalID: -1760950564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3b8647f7caa48a399a35513e4a911b
+      internalID: -40032720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a911784acb6124ab583dae133558056a
+      internalID: 264243236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529a7220e472a49579480898aa2f3aad
+      internalID: 1251215950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17d8f36a51974949b046b6d78e63f1c
+      internalID: -1612899174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a0600278cc34942876e4cab3a92356
+      internalID: 1035079881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9358642a266cc4349a6b7c4c9919d2ab
+      internalID: 1860996691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95cf5fd00d4845298df0c208b65a24e
+      internalID: -832370945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e876ebb659e94c88a91b1886dd673a8
+      internalID: -601717355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83eaf78f7e0ce4cb685060724d084402
+      internalID: 165104357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80617a4a6354d478f98ffe1f19e4bbdb
+      internalID: 1737894036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482b4362dd05c428f8cf265de208da4d
+      internalID: -2019940420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e2706c8b7fe4522892326f3ba70fcf
+      internalID: 701330490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3fe55d5b3804c1ebeeb3de9991c266
+      internalID: -809920293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 55
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b80a86feeac4159a31105999fd90c9
+      internalID: 884746352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9543292dea341437ba9aae43e749c373
+      internalID: -1252237366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef1bf058acd046c980fa7f894941feb
+      internalID: 102903343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351cb6a3679564b0b8eee990ee14affe
+      internalID: -1393016352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460b0d44c6393437a9748ce5a8dd9564
+      internalID: 1650304784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7839ee7d77f411fa7b240c4e332b6a
+      internalID: -2068020668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065d92c6d31dd445c9c8c44fad7af5d2
+      internalID: 1755156667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e0f88f2929a483d8361097911ac021
+      internalID: -975633110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03f75d6600564943a0442f3efdfcfda
+      internalID: -2114272322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a287eec92134d6ba8dfd543bdc3d7c
+      internalID: -26389393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a403cc240a44ed9b70f5ca81166bd4
+      internalID: -430232811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScoreMeter_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bb32d759be246dc81b99add86cb870
+      internalID: -1531146701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ScoreMeter_0: -1528233613
+      ScoreMeter_1: 306820630
+      ScoreMeter_10: 582865753
+      ScoreMeter_11: -745133687
+      ScoreMeter_12: -898469590
+      ScoreMeter_13: 2087085587
+      ScoreMeter_14: -1252720356
+      ScoreMeter_15: 1099994363
+      ScoreMeter_16: -1974103077
+      ScoreMeter_17: -596195789
+      ScoreMeter_18: 1720231323
+      ScoreMeter_19: -2139458472
+      ScoreMeter_2: -632238628
+      ScoreMeter_20: 1857031587
+      ScoreMeter_21: 1397369573
+      ScoreMeter_22: 1867502102
+      ScoreMeter_23: 408755225
+      ScoreMeter_24: -1454090330
+      ScoreMeter_25: -1160755541
+      ScoreMeter_26: 3238087
+      ScoreMeter_27: -659917031
+      ScoreMeter_28: 1820416656
+      ScoreMeter_29: 1617816647
+      ScoreMeter_3: 440125558
+      ScoreMeter_30: 1579202695
+      ScoreMeter_31: 1081511523
+      ScoreMeter_32: -935985075
+      ScoreMeter_33: -1760950564
+      ScoreMeter_34: -40032720
+      ScoreMeter_35: 264243236
+      ScoreMeter_36: 1251215950
+      ScoreMeter_37: -1612899174
+      ScoreMeter_38: 1035079881
+      ScoreMeter_39: 1860996691
+      ScoreMeter_4: -801695168
+      ScoreMeter_40: -832370945
+      ScoreMeter_41: -601717355
+      ScoreMeter_42: 165104357
+      ScoreMeter_43: 1737894036
+      ScoreMeter_44: -2019940420
+      ScoreMeter_45: 701330490
+      ScoreMeter_46: -809920293
+      ScoreMeter_47: 884746352
+      ScoreMeter_48: -1252237366
+      ScoreMeter_49: 102903343
+      ScoreMeter_5: 843835139
+      ScoreMeter_50: -1393016352
+      ScoreMeter_51: 1650304784
+      ScoreMeter_52: -2068020668
+      ScoreMeter_53: 1755156667
+      ScoreMeter_54: -975633110
+      ScoreMeter_55: -2114272322
+      ScoreMeter_56: -26389393
+      ScoreMeter_57: -430232811
+      ScoreMeter_58: -1531146701
+      ScoreMeter_6: 1849769677
+      ScoreMeter_7: -1817401408
+      ScoreMeter_8: 1592740194
+      ScoreMeter_9: -745043498
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
