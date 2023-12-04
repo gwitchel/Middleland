@@ -121,11 +121,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 85
+        width: 9
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,11 +142,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 70
+        width: 9
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,11 +163,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 50
         width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: deah 16x16_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 32
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 6
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,12 +204,12 @@ TextureImporter:
       name: deah 16x16_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 17
+        width: 6
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,18 +225,18 @@ TextureImporter:
       name: deah 16x16_5
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 6
+        height: 3
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0926c34f1a3b746fcb64cd2567665cb9
+      spriteID: 00d3d3b84f27844b78002f8d0693e8bc
       internalID: 1213577467
       vertices: []
       indices: 

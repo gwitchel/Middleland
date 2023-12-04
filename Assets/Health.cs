@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : EnemyMovement
 {
-    [SerializeField] public int health = 6; 
+    [SerializeField] public int health = 5; 
 
     private int MAX_HEALTH = 6; 
 
+    public float dieTime; 
+    public float damageTime; 
+
     private Animator anim; 
     public Rigidbody2D rb;
+
     void Start(){
         anim = GetComponent<Animator>();
         rb =  GetComponent<Rigidbody2D>();
@@ -20,9 +24,7 @@ public class Health : MonoBehaviour
         if(amount > 0)
         {
             this.health -= amount;
-            if (anim != null){
-                anim.SetInteger("state",5);
-            } 
+            Damage(); 
         }
         if (health <= 0)
         {
@@ -36,16 +38,37 @@ public class Health : MonoBehaviour
         
         
     }
-
     public void Heal(int amount){
          if(amount > 0)
         {
             this.health = Mathf.Min(this.health+amount,MAX_HEALTH);
         }
     }
-
     private void Die(){
-        anim.SetTrigger("death");
-        Destroy(gameObject,1f);
+        StartCoroutine(DieCoroutine());;
+    }
+    private IEnumerator DieCoroutine()
+    {
+        if (anim)
+        {
+            yield return StartCoroutine(DamageCoroutine());
+            yield return new WaitForSeconds(0.5f);
+            anim.SetLayerWeight(anim.GetLayerIndex("Die"), 1);
+            yield return new WaitForSeconds(dieTime);
+        }
+        
+        Destroy(gameObject);
+    }
+    private void Damage(){
+        StartCoroutine(DamageCoroutine());
+    }
+    private IEnumerator DamageCoroutine()
+    {
+        if (anim)
+        {
+            anim.SetLayerWeight(anim.GetLayerIndex("Damage"), 1);
+            yield return new WaitForSeconds(damageTime);
+            anim.SetLayerWeight(anim.GetLayerIndex("Damage"), 0);
+        }
     }
 }

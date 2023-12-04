@@ -35,7 +35,6 @@ public class PlantMovement : MonoBehaviour
         // Check if it's time to play the secondary animation
         if (timer >= primaryAnimationFrames)
         {
-            Debug.Log("SPAWINGING ENEMY");
             enemySpawner.SpawnEnemyNearby();
             
             // Reset the frame counter

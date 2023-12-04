@@ -23,9 +23,10 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemyNearby()
     {
-        Vector2 spawnPosition = CalculateSpawnPosition();
+        Vector3 spawnPosition = GetRandomPositionInNearbyNonFilledTile();
+        
 
-        if(spawnPosition != Vector2.zero) // Check if a valid position was found
+        if(spawnPosition != Vector3.zero) // Check if a valid position was found
         {
             Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         }
@@ -34,46 +35,50 @@ public class EnemySpawner : MonoBehaviour
             Debug.Log("No valid position found for spawning");
         }
     }
-    Vector2 CalculateSpawnPosition()
+       public Vector3 GetRandomPositionInNearbyNonFilledTile()
     {
-        for(int i = 0; i < 30; i++) // Try multiple times to find a valid position
+        Vector3Int currentTile = tilemap.WorldToCell(transform.position);
+        List<Vector3Int> nonFilledTiles = FindNonFilledVerticalAdjacentTiles(currentTile);
+
+        if (nonFilledTiles.Count == 0)
         {
+            Debug.LogError("No non-filled tiles found above or below");
+            return Vector3.zero;
+        }
 
-            // Calculate a random radius with more weight towards the average radius
-            float randomRadius = averageRadius + Random.Range(-radiusVariance, radiusVariance) * Mathf.Pow(Random.value, 2);
+        Vector3Int selectedTile = nonFilledTiles[Random.Range(0, nonFilledTiles.Count)];
+        return GetRandomPositionInTile(selectedTile);
+    }
 
-            // Calculate the spawn position
-            // Vector2 potentialSpawnPosition = new Vector2(transform.position.x,transform.position.y) + randomRadius * new Vector2(Random.value < 0.5f ? -1 : 1, 0);
-            Vector2 potentialSpawnPosition = new Vector2(transform.position.x,transform.position.y) + randomRadius * new Vector2(Random.value < 0.5f ? -1 : 1, 0.75f);
+    private List<Vector3Int> FindNonFilledVerticalAdjacentTiles(Vector3Int currentTile)
+    {
+        List<Vector3Int> nonFilledTiles = new List<Vector3Int>();
 
-            // Check if the position is valid (not overlapping and on the same surface)
-            if(IsValidSpawnPosition(potentialSpawnPosition))
+        // Check only the tiles above and below
+        for (int y = -1; y <= 1; y++)
+        {
+            if (y == 0) continue; // Skip the current tile
+
+            Vector3Int checkingTile = new Vector3Int(currentTile.x, currentTile.y + y, currentTile.z);
+            if (!tilemap.HasTile(checkingTile))
             {
-                return potentialSpawnPosition;
+                nonFilledTiles.Add(checkingTile);
             }
         }
 
-        return Vector2.zero; // Return zero if no valid position was found
+        return nonFilledTiles;
     }
-    bool IsValidSpawnPosition(Vector2 position)
+
+    private Vector3 GetRandomPositionInTile(Vector3Int tile)
     {
-        // Check for overlap with other colliders
-        // if(Physics2D.OverlapPoint(position)) // Adjust the radius as needed for your game
-        // {
-        //     return false;
-        // }
+        Vector3 tileCenter = tilemap.GetCellCenterWorld(tile);
+        Vector3 tileSize = tilemap.cellSize;
 
-        return(IsPositionFilled(position));
+        float randomX = Random.Range(tileCenter.x - tileSize.x / 2, tileCenter.x + tileSize.x / 2);
+        float randomY = Random.Range(tileCenter.y - tileSize.y / 2, tileCenter.y + tileSize.y / 2);
 
-        // Optionally, add additional checks here, like ensuring the enemy is on the same surface
-
-        // return true;
+        return new Vector3(randomX, randomY, tileCenter.z);
     }
-    public bool IsPositionFilled(Vector2 worldPosition)
-    {
-        Vector3Int cellPosition = tilemap.WorldToCell(new Vector3(worldPosition.x,worldPosition.y,0)); // Convert world position to cell position
-        return tilemap.GetTile(cellPosition) != null; // Check if there is a tile at this position
-    }
-    
-        
 }
+
+
