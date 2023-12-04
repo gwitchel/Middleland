@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9043283636013510442}
   - component: {fileID: 2744778560148148837}
   - component: {fileID: 3642220408704806360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,6 +141,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 7484809493776291762, guid: 8a09665bc214646759dd69c9f76bf4e8, type: 3}
   averageRadius: 2
   radiusVariance: 1
+  tilemap: {fileID: 0}
 --- !u!50 &9043283636013510442
 Rigidbody2D:
   serializedVersion: 4

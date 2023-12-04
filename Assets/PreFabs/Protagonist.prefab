@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 291593213}
   - component: {fileID: 291593212}
   - component: {fileID: 291593211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   rb: {fileID: 8438441905762916343}
   anim: {fileID: 8438441905762916339}
   spriteRenderer: {fileID: 8438441905762916342}
-  protagonistBaseMovement: {fileID: 0}
+  protagonistBaseMovement: {fileID: 4487835851903705140}
 --- !u!1 &964627511
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 964627515}
   - component: {fileID: 964627514}
   - component: {fileID: 964627513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DownAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   rb: {fileID: 8438441905762916343}
   anim: {fileID: 8438441905762916339}
   spriteRenderer: {fileID: 8438441905762916342}
-  protagonistBaseMovement: {fileID: 0}
+  protagonistBaseMovement: {fileID: 4487835851903705140}
 --- !u!1 &1581404384667290419
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3832627672297777224}
   - component: {fileID: 146149001811257728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HealthDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   protagonistRB: {fileID: 8438441905762916343}
   Heart: {fileID: 5933552053813541254, guid: 71ca909e3d069435aa8780314c7a5e9f, type: 3}
   HalfHeart: {fileID: 3032847061873925299, guid: 2661dbf7e7fab4c8896ee5ec48192b08, type: 3}
-  Reload: {fileID: 0}
+  Reload: {fileID: 5933552053813541254, guid: c035d6d9931284680a6ec0edacbe6b78, type: 3}
 --- !u!1 &5610537768236069978
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 877740984404402659}
   - component: {fileID: 8385559989943351764}
   - component: {fileID: 7037299122880314470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScoreDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5610537768236069978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.65, y: 0.96, z: 10}
+  m_LocalPosition: {x: -3.79, y: 1.92, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -318,8 +318,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1994865115
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1528233613, guid: 9c1cb3e898ffe4a3eb586698732d3c72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 6032062343507003047}
   - component: {fileID: 391326737}
   - component: {fileID: 393352790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ MonoBehaviour:
   rb: {fileID: 8438441905762916343}
   anim: {fileID: 8438441905762916339}
   spriteRenderer: {fileID: 8438441905762916342}
-  protagonistBaseMovement: {fileID: 0}
+  protagonistBaseMovement: {fileID: 4487835851903705140}
 --- !u!1 &8239347331915096787
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1410105780285393910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackAreas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 7206881626176296873}
   - component: {fileID: 360117649}
   - component: {fileID: 657162170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ MonoBehaviour:
   rb: {fileID: 8438441905762916343}
   anim: {fileID: 8438441905762916339}
   spriteRenderer: {fileID: 8438441905762916342}
-  protagonistBaseMovement: {fileID: 0}
+  protagonistBaseMovement: {fileID: 4487835851903705140}
 --- !u!1 &8438441905487673803
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 8438441905487673800}
   - component: {fileID: 8438441905487673802}
   - component: {fileID: 1015926584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 2059754612}
   - component: {fileID: 4487835851903705140}
   - component: {fileID: 3413236744965756972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Protagonist
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -717,8 +717,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8438441905762916233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.76, y: -4, z: 0}
-  m_LocalScale: {x: 1.3064717, y: 1.3064717, z: 1.3064717}
+  m_LocalPosition: {x: -7.7, y: -3.93, z: 0}
+  m_LocalScale: {x: 1.8247828, y: 1.9533306, z: 1.7357816}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8438441905487673655}
@@ -812,7 +812,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006759241, y: 0.23174104}
+  m_Offset: {x: -0.006759241, y: 0.2305488}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -823,7 +823,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17677814, y: 0.4747885}
+  m_Size: {x: 0.17677814, y: 0.46617353}
   m_EdgeRadius: 0
 --- !u!95 &8438441905762916339
 Animator:
@@ -862,7 +862,7 @@ MonoBehaviour:
   BasicPlant: {fileID: 6627470908572169306, guid: f5b4ab5248f8a4bacb34024472d88b62, type: 3}
   GhostPlant: {fileID: 6627470908572169306, guid: bd576ccfef11041129da5842695076d3, type: 3}
   anim: {fileID: 8438441905762916339}
-  DiggableTile: {fileID: 0}
+  DiggableTile: {fileID: 11400000, guid: a8ea9bd19d6a04a36872513fdf597754, type: 2}
 --- !u!114 &8438441905762916337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,5 +932,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  winningScore: 100
+  winningScore: 10
   scoreAnimator: {fileID: 7037299122880314470}
