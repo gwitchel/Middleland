@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class enemy_01_movement : EnemyMovement
 {
+    public Tilemap tilemap;
     private float speed = 2f;
     private bool move = false;
     public Rigidbody2D rb;
@@ -20,16 +22,17 @@ public class enemy_01_movement : EnemyMovement
         rb.freezeRotation = true;
         protagonist =  GameObject.Find("/Protagonist");
 
+        GameObject gridGameObject = GameObject.Find("Grid");
+        tilemap = gridGameObject.transform.Find("test_map_contact").GetComponent<Tilemap>();  
+
         StartCoroutine(ToggleMoveRoutine());
     }
 
-    
     // Update is called once per frame
     void Update()
     {
         updateAnimationState();
     }
-
     public void updateAnimationState(){
 
         if (anim.GetLayerWeight(anim.GetLayerIndex("Damage")) == 1 && !begunDamage)
@@ -54,22 +57,27 @@ public class enemy_01_movement : EnemyMovement
                 rb.velocity = new Vector2(0,0);
             }
         }
-
-
-
     }
     public void DamageBounce()
     {
-            if((protagonist.transform.position-this.transform.position).x>0) 
-            {
-                // positive: attacker is to right (bounce left )
-                rb.velocity = new Vector2(-5,10);
-            }
-            else
-            {
-                // negative: attacker is to left (bounce right )
-                rb.velocity = new Vector2(rb.velocity.x+5,rb.velocity.y+10);
-            } 
+        if((protagonist.transform.position-this.transform.position).x>0) 
+        {
+            // positive: attacker is to right (bounce left )
+            rb.velocity = new Vector2(-5,10);
+        }
+        else
+        {
+            // negative: attacker is to left (bounce right )
+            rb.velocity = new Vector2(rb.velocity.x+5,rb.velocity.y+10);
+        } 
+    }
+
+    private bool CanMoveToDirection( )
+    {
+        Debug.Log("Can move");
+        Vector3 directionVec = new Vector3 (direction * speed, 0,0);
+        Vector3Int targetCell = tilemap.WorldToCell(transform.position + directionVec * Time.deltaTime + new Vector3 (0, -1,0));
+        return tilemap.HasTile(targetCell); // Returns true if the target cell is filled
     }
     
     public void Move()
@@ -78,8 +86,15 @@ public class enemy_01_movement : EnemyMovement
         // Randomly select a direction: 1 for right, -1 for left
 
         // Move the GameObject
-        rb.velocity = new Vector2(direction * speed, rb.velocity.y);
-
+        if(CanMoveToDirection())
+        {
+            rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+        } 
+        else
+        {
+            direction *= -1;
+            spriteRenderer.flipX = direction < 0;
+        }  
     }
 
     private IEnumerator ToggleMoveRoutine()
@@ -88,14 +103,13 @@ public class enemy_01_movement : EnemyMovement
         {
             // Toggle the 'move' boolean
             move = !move;
-            if(move){
-                Debug.Log("Changeing direction");
+
+            if(move)
+            {
                 direction = Random.Range(0, 2) * 2 - 1;
                 spriteRenderer.flipX = direction < 0;
             }
-            // Print the current state of 'move' for debugging
-            Debug.Log("Move is now: " + move);
-
+ 
             // Wait for a random duration between 1 and 3 seconds
             float waitTime = Random.Range(2f, 5f);
             yield return new WaitForSeconds(waitTime);
