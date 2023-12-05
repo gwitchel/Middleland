@@ -123,7 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc77112ea84dc4a3fa921f45bfcb2cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryAnimationFrames: 3000
   plantProduction: {fileID: 3642220408704806360}
   enemySpawner: {fileID: 6627470908572169319}
 --- !u!114 &6627470908572169319
@@ -142,6 +141,7 @@ MonoBehaviour:
   averageRadius: 2
   radiusVariance: 1
   tilemap: {fileID: 0}
+  spawnInterval: 10
 --- !u!50 &9043283636013510442
 Rigidbody2D:
   serializedVersion: 4

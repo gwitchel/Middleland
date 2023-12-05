@@ -14,6 +14,9 @@ public class enemy_01_movement : EnemyMovement
     private GameObject protagonist; 
     public bool begunDamage = false; 
     private float direction = 1;
+    public GameObject attackArea;
+
+    private BoxCollider2D BoxCollider2DBody;
     void Start()
     {
         rb =  GetComponent<Rigidbody2D>();
@@ -21,20 +24,21 @@ public class enemy_01_movement : EnemyMovement
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb.freezeRotation = true;
         protagonist =  GameObject.Find("/Protagonist");
+        BoxCollider2DBody = GetComponent<BoxCollider2D>();
 
         GameObject gridGameObject = GameObject.Find("Grid");
         tilemap = gridGameObject.transform.Find("test_map_contact").GetComponent<Tilemap>();  
 
+        StartCoroutine(PlaySpawnAnimation());
         StartCoroutine(ToggleMoveRoutine());
     }
 
     // Update is called once per frame
     void Update()
     {
-        updateAnimationState();
+        if(anim.GetInteger("state") > 0 ) updateAnimationState();
     }
     public void updateAnimationState(){
-
         if (anim.GetLayerWeight(anim.GetLayerIndex("Damage")) == 1 && !begunDamage)
         {
             begunDamage = true;
@@ -53,6 +57,7 @@ public class enemy_01_movement : EnemyMovement
             }
             else
             {
+                anim.SetInteger("state",1);
                 anim.Play("enemy_01_idle");
                 rb.velocity = new Vector2(0,0);
             }
@@ -82,6 +87,7 @@ public class enemy_01_movement : EnemyMovement
     
     public void Move()
     {
+        anim.SetInteger("state",2);
         anim.Play("enemy_01_walk");
         // Randomly select a direction: 1 for right, -1 for left
 
@@ -114,6 +120,24 @@ public class enemy_01_movement : EnemyMovement
             float waitTime = Random.Range(2f, 5f);
             yield return new WaitForSeconds(waitTime);
 
+        }
+    }
+
+    private IEnumerator PlaySpawnAnimation()
+    {
+        rb.isKinematic = true;
+        yield return new WaitForSeconds(3);
+        anim.SetInteger("state",1);
+        rb.isKinematic = false;
+        BoxCollider2DBody.enabled = true;
+        if (attackArea == null)
+        {
+            Debug.LogError("Attack area not found!");
+        }
+        else
+        {
+            // Initially disable the attack area
+            attackArea.SetActive(true);
         }
     }
 }

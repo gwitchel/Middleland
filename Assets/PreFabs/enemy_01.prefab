@@ -119,7 +119,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7484809493776291762}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -171,8 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8e42b6d482c443c91931da91301bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
   rb: {fileID: 0}
   begunDamage: 0
+  attackArea: {fileID: 7484809493938723265}
 --- !u!114 &7484809493776291771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7484809493938723264
 Transform:
   m_ObjectHideFlags: 0

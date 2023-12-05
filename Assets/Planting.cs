@@ -135,6 +135,7 @@ public class Planting : MonoBehaviour
     public void Dig(){
         GameObject selectedPlant = GetSelectedPlant();
         if(selectedPlant){
+            StartCoroutine(PlayDiggingAnimation());
             Vector3Int plantTilePosition = tilemap.WorldToCell(selectedPlant.transform.position);
             Vector3Int TileBelowPlantTilePosition = new Vector3Int(plantTilePosition.x, plantTilePosition.y-1, plantTilePosition.z);
             
@@ -152,9 +153,18 @@ public class Planting : MonoBehaviour
             plantProduction.Harvest(); 
         }
     }
-
     private IEnumerator PlayPlantingAnimation()
     {
+        int layerIndex = anim.GetLayerIndex("Driven Events");
+        anim.SetLayerWeight(layerIndex, 1f); // Activate the layer
+        anim.Play("Plant");
+        yield return new WaitForSeconds(0.45f); // Wait for the specified duration
+        anim.SetLayerWeight(layerIndex, 0f); // Deactivate the layer
+    }
+
+    private IEnumerator PlayDiggingAnimation()
+    {
+        // right now digging and planting are the same, change to different in the future 
         int layerIndex = anim.GetLayerIndex("Driven Events");
         anim.SetLayerWeight(layerIndex, 1f); // Activate the layer
         anim.Play("Plant");

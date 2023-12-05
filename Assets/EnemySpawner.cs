@@ -9,10 +9,13 @@ public class EnemySpawner : MonoBehaviour
     public float averageRadius = 2f; // Average radius from the GameObject
     public float radiusVariance = 1f; // Variance in the radius
     public Tilemap tilemap;
+
+    public int spawnInterval; 
     void Start()
     {
         GameObject gridGameObject = GameObject.Find("Grid");
         tilemap = gridGameObject.transform.Find("test_map_contact").GetComponent<Tilemap>();        
+        StartCoroutine(SpawnRoutine());
     }
 
     // Update is called once per frame
@@ -38,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
        public Vector3 GetRandomPositionInNearbyNonFilledTile()
     {
         Vector3Int currentTile = tilemap.WorldToCell(transform.position);
-        List<Vector3Int> nonFilledTiles = FindNonFilledVerticalAdjacentTiles(currentTile);
+        List<Vector3Int> nonFilledTiles = FindNonFilledHorizontalAdjacentTiles(currentTile);
 
         if (nonFilledTiles.Count == 0)
         {
@@ -50,16 +53,16 @@ public class EnemySpawner : MonoBehaviour
         return GetRandomPositionInTile(selectedTile);
     }
 
-    private List<Vector3Int> FindNonFilledVerticalAdjacentTiles(Vector3Int currentTile)
+    private List<Vector3Int> FindNonFilledHorizontalAdjacentTiles(Vector3Int currentTile)
     {
         List<Vector3Int> nonFilledTiles = new List<Vector3Int>();
 
         // Check only the tiles above and below
-        for (int y = -1; y <= 1; y++)
+        for (int x = -1; x <= 1; x++)
         {
-            if (y == 0) continue; // Skip the current tile
+            if (x == 0) continue; // Skip the current tile
 
-            Vector3Int checkingTile = new Vector3Int(currentTile.x, currentTile.y + y, currentTile.z);
+            Vector3Int checkingTile = new Vector3Int(currentTile.x+x, currentTile.y , currentTile.z);
             if (!tilemap.HasTile(checkingTile))
             {
                 nonFilledTiles.Add(checkingTile);
@@ -75,9 +78,19 @@ public class EnemySpawner : MonoBehaviour
         Vector3 tileSize = tilemap.cellSize;
 
         float randomX = Random.Range(tileCenter.x - tileSize.x / 2, tileCenter.x + tileSize.x / 2);
-        float randomY = Random.Range(tileCenter.y - tileSize.y / 2, tileCenter.y + tileSize.y / 2);
+        float randomY = tileCenter.y - tileSize.y / 2;
 
         return new Vector3(randomX, randomY, tileCenter.z);
+    }
+
+    private IEnumerator SpawnRoutine()
+    {
+        while (true) // Infinite loop to keep the coroutine running
+        {
+            yield return new WaitForSeconds(spawnInterval); // Wait for the specified interval
+            SpawnEnemyNearby(); // Call the spawn function
+
+        }
     }
 }
 
