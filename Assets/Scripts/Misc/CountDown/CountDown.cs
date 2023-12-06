@@ -8,7 +8,7 @@ public class CountDown : MonoBehaviour
 {
     public float timeRemaining = 60; // 60 seconds for example
     public bool timerIsRunning = false;
-
+    public LevelLoader levelLoader;
     public TMP_Text timerText; // For TextMeshPro UI
     // public Text text; // Use this instead if you're using standard Unity UI
 
@@ -32,6 +32,7 @@ public class CountDown : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                levelLoader.LoadFailedLevel();
                 // You can add additional actions here for when the timer ends.
             }
         }

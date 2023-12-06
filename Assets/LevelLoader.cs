@@ -13,12 +13,15 @@ public class LevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.N))
-        {
-            LoadNextLevel();
-        }
+        // if(Input.GetKeyDown(KeyCode.N))
+        // {
+        //     LoadNextLevel();
+        // }
     }
 
+    public void LoadFailedLevel(){
+        StartCoroutine(LoadLevel(0));
+    }
     public void LoadNextLevel(){
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
@@ -29,6 +32,8 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(LevelIndex);
     }
+
+
 
     private IEnumerator PlayDieAnimation()
     {

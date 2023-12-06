@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1994865115
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 628070135, guid: 969b5b74c4a6a4d0397b6ac36c29cc76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc77112ea84dc4a3fa921f45bfcb2cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 6627470908572169305}
   plantProduction: {fileID: 3642220408704806360}
   enemySpawner: {fileID: 6627470908572169319}
 --- !u!114 &6627470908572169319
@@ -201,6 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fbcca8a7f694117b8c0fa096c87e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 60
+  timerDuration: 10
   readyForHarvest: 0
   score: {fileID: 0}

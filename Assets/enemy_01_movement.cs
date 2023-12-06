@@ -27,7 +27,8 @@ public class enemy_01_movement : EnemyMovement
         BoxCollider2DBody = GetComponent<BoxCollider2D>();
 
         GameObject gridGameObject = GameObject.Find("Grid");
-        tilemap = gridGameObject.transform.Find("test_map_contact").GetComponent<Tilemap>();  
+        // tilemap = gridGameObject.transform.Find("test_map_contact").GetComponent<Tilemap>();  
+        tilemap = gridGameObject.transform.Find("ContactMap").GetComponent<Tilemap>();  
 
         StartCoroutine(PlaySpawnAnimation());
         StartCoroutine(ToggleMoveRoutine());

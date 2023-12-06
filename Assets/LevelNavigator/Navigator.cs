@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class Navigator : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Navigator : MonoBehaviour
     
     public GameObject targetButton;
 
-    public int foo = 0; 
+    public int level = 2; 
 
     public int direction = 0; 
     void Update()
@@ -43,8 +44,21 @@ public class Navigator : MonoBehaviour
                 StartCoroutine(PanCamera(targetPosition));
             }
         }
+
+        CheckReplayLevel();
+    }
+    
+    public void CheckReplayLevel() 
+    {
+        if(Input.GetKeyDown(KeyCode.Space) && direction == 0)
+        {
+    
+            SceneManager.LoadScene("Level2");
+               
+        }
     }
 
+    
 
     public void updateTargetButton(){
         float scaleFactor = 1.2f;

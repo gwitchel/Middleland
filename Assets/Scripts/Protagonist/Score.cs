@@ -9,6 +9,8 @@ public class Score : MonoBehaviour
     
     public Animator scoreAnimator;
 
+    public LevelLoader levelLoader;
+
     void Start()
     {
         scoreAnimator.speed = 0f;
@@ -17,12 +19,15 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            scoreAnimator.speed = 1f;
-            IncreaseScore(1);
-        }
+        // if (Input.GetKeyDown(KeyCode.S))
+        // {
+        //     scoreAnimator.speed = 1f;
+        //     IncreaseScore(1);
+        // }
         UpdateAnimation();
+        if(score >= winningScore){
+            levelLoader.LoadNextLevel();
+        }
     }
 
     public void IncreaseScore(int amount ){

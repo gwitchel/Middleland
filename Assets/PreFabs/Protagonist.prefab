@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 5763093083792564008}
   - component: {fileID: 4053233049885099041}
   - component: {fileID: 1901688413146650532}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1994865115
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &5763093083792564008
@@ -564,8 +564,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ce9359ab1a14d60930f98f9d69954f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 60
+  timeRemaining: 300
   timerIsRunning: 0
+  levelLoader: {fileID: 0}
   timerText: {fileID: 6922700843500814937}
 --- !u!1 &8239347331915096787
 GameObject:
@@ -1052,6 +1053,7 @@ MonoBehaviour:
   score: 0
   winningScore: 10
   scoreAnimator: {fileID: 7037299122880314470}
+  levelLoader: {fileID: 0}
 --- !u!1 &8778300002977240922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1066,7 @@ GameObject:
   - component: {fileID: 1816009433860941966}
   - component: {fileID: 6922700843500814937}
   - component: {fileID: 3572132576764208596}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,4 +1204,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRemaining: 60
   timerIsRunning: 0
-  timerText: {fileID: 0}
+  levelLoader: {fileID: 0}
+  timerText: {fileID: 6922700843500814937}

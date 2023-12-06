@@ -16,18 +16,22 @@ public class PlantProduction : MonoBehaviour
     }
 
     public void Harvest(){
-        // TODO: score management based on plant level
         Debug.Log("INCREASING SCORE");
         score.IncreaseScore(5);
         readyForHarvest = false;
+        StartCoroutine(StartCountdown(timerDuration));
     }
     private IEnumerator StartCountdown(float duration)
     {
-        // Wait for the duration to pass
-        yield return new WaitForSeconds(duration);
+        readyForHarvest = false;
+        float currentTime = duration;
 
-        // Set readyForHarvest to true after the countdown
+        while (currentTime > 0)
+        {
+            currentTime -= Time.deltaTime;
+            yield return null;
+        }
+
         readyForHarvest = true;
-        Debug.Log("Harvest is now ready.");
     }
 }
