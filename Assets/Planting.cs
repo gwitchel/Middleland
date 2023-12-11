@@ -12,6 +12,7 @@ public class Planting : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public GameObject BasicPlant; 
     public GameObject GhostPlant; 
+    public GameObject Selector; 
      public Animator anim; 
     private bool GhostPlaced = false; 
     public Tile DiggableTile;
@@ -41,6 +42,7 @@ public class Planting : MonoBehaviour
 
     void Update()
     {
+        DisplaySelector();
         // if the protagonist is moves destroy the ghost 
         if (Mathf.Abs(protagonistRB.velocity.x) > 0.1f || Mathf.Abs(protagonistRB.velocity.x) > 0.1f)
         {
@@ -70,21 +72,50 @@ public class Planting : MonoBehaviour
         if (protagonist != null && tilemap != null)
         {
             Vector3Int protagonistTilePosition = tilemap.WorldToCell(protagonist.transform.position);
-            Vector3Int tilePosition = spriteRenderer.flipX ? new Vector3Int(protagonistTilePosition.x - 1, protagonistTilePosition.y-1, protagonistTilePosition.z) : new Vector3Int(protagonistTilePosition.x + 2, protagonistTilePosition.y-1, protagonistTilePosition.z);
+            Vector3Int tilePosition = spriteRenderer.flipX ? 
+                new Vector3Int(protagonistTilePosition.x-1, protagonistTilePosition.y-1, protagonistTilePosition.z) 
+                :
+                new Vector3Int(protagonistTilePosition.x + 1, protagonistTilePosition.y-1, protagonistTilePosition.z);
             // Check if there's plantable dirt at this position
-            if (tilemap.HasTile(tilePosition))
-            {
-                return true; 
-            }
+            // return tilemap.HasTile(tilePosition); 
+
+       
+            return tilemap.HasTile(tilePosition);
+            
         }
 
         return false; 
 
     }
-    public void DisplayGhost(){
+
+    
+    public void DisplaySelector()
+    {
+        if(canPlant() || GetSelectedPlant() != null){
+            Debug.Log("Can Plant");
+            Selector.SetActive(true);
+             // calculate spawn position on tilemap
+            Vector3Int protagonistTilePosition = tilemap.WorldToCell(protagonist.transform.position);
+            Vector3 spawnPosition = spriteRenderer.flipX ? 
+                tilemap.CellToWorld(new Vector3Int(protagonistTilePosition.x , protagonistTilePosition.y, protagonistTilePosition.z)) - new Vector3(tilemap.cellSize.x/2,0,0)
+                :
+                tilemap.CellToWorld(new Vector3Int(protagonistTilePosition.x + 1, protagonistTilePosition.y, protagonistTilePosition.z)) + new Vector3(tilemap.cellSize.x/2,0,0);
+
+            Selector.transform.position = new Vector3(spawnPosition.x,spawnPosition.y); 
+        } 
+        else 
+        {
+            Selector.SetActive(false);
+        }
+    }
+    public void DisplayGhost()
+    {
         // calculate spawn position on tilemap
         Vector3Int protagonistTilePosition = tilemap.WorldToCell(protagonist.transform.position);
-        Vector3 spawnPosition = spriteRenderer.flipX ? tilemap.CellToWorld(new Vector3Int(protagonistTilePosition.x - 1, protagonistTilePosition.y, protagonistTilePosition.z)) : tilemap.CellToWorld(new Vector3Int(protagonistTilePosition.x + 2, protagonistTilePosition.y, protagonistTilePosition.z));
+        Vector3 spawnPosition = spriteRenderer.flipX ? 
+            tilemap.CellToWorld(new Vector3Int(protagonistTilePosition.x , protagonistTilePosition.y, protagonistTilePosition.z)) - new Vector3(tilemap.cellSize.x/2,0,0)
+            :
+            tilemap.CellToWorld(new Vector3Int(protagonistTilePosition.x + 1, protagonistTilePosition.y, protagonistTilePosition.z)) + new Vector3(tilemap.cellSize.x/2,0,0);
 
         // spawn a plant at the target position
         Instantiate(GhostPlant, spawnPosition, Quaternion.identity);
